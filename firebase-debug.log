@@ -1,0 +1,60 @@
+[debug] [2018-03-15T08:08:24.258Z] ----------------------------------------------------------------------
+[debug] [2018-03-15T08:08:24.263Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\thuyvk\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-03-15T08:08:24.263Z] CLI Version:   3.17.6
+[debug] [2018-03-15T08:08:24.263Z] Platform:      win32
+[debug] [2018-03-15T08:08:24.264Z] Node Version:  v6.11.2
+[debug] [2018-03-15T08:08:24.264Z] Time:          Thu Mar 15 2018 15:08:24 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:08:24.264Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-15T08:08:24.287Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-15T08:08:24.288Z] > authorizing via signed-in user
+[debug] [2018-03-15T08:08:24.292Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/thuyvkblog  
+  
+ Thu Mar 15 2018 15:08:24 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:09:07.036Z] Error: connect ETIMEDOUT 104.197.85.31:443
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1086:14)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 104.197.85.31:443
+[debug] [2018-03-15T08:20:36.636Z] ----------------------------------------------------------------------
+[debug] [2018-03-15T08:20:36.636Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\thuyvk\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-03-15T08:20:36.636Z] CLI Version:   3.17.6
+[debug] [2018-03-15T08:20:36.636Z] Platform:      win32
+[debug] [2018-03-15T08:20:36.636Z] Node Version:  v6.11.2
+[debug] [2018-03-15T08:20:36.636Z] Time:          Thu Mar 15 2018 15:20:36 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:20:36.636Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-15T08:20:36.657Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-15T08:20:36.657Z] > authorizing via signed-in user
+[debug] [2018-03-15T08:20:36.673Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-15T08:20:36.673Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/NIc2SFYcThKiQqQX-HC6ouxTznHFn1jQxxrgnzHPeeA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Mar 15 2018 15:20:36 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:20:37.106Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-15T08:20:37.122Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/thuyvkblog  
+  
+ Thu Mar 15 2018 15:20:37 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:20:38.301Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-15T08:20:38.303Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/thuyvkblog/tokens  
+  
+ Thu Mar 15 2018 15:20:38 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:20:39.287Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-15T08:20:39.290Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/thuyvkblog  
+  
+ Thu Mar 15 2018 15:20:39 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:20:40.721Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\GitHubs_Project\Firebase_AngularJs_Chat'...
+[info] 
+[debug] [2018-03-15T08:20:40.721Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/763203502389/clients/_:getWebAppConfig  
+  
+ Thu Mar 15 2018 15:20:40 GMT+0700 (SE Asia Standard Time)
+[debug] [2018-03-15T08:20:41.525Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+

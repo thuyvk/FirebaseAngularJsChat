@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container" id="live-chat" ng-app="app">
+        <div class="chat" ng-controller="chatCtrl">
+            <h4>Xin chao: {{firebaseUser.displayName}}
+                &nbsp;
+                <a href="javascript:;" ng-click="auth.$signOut()">Log Out</a>
+            </h4>
+            <hr>
+            <!-- Sign In -->
+            <div ng-show="!showChat">
+                <p>
+                    <a href="javascript:;" class='btn btn-info' ng-click="auth.$signInWithPopup('google')">
+                        Anonymously Login
+                    </a>
+                </p>
+                <p>{{error.message}}</p>
+            </div>
+
+            <!-- Chat form -->
+            <div id="chat-history" ng-show="showChat">
+                <div class="message-item" ng-repeat="ms in messages">
+                    <p>
+                        <strong>
+                            {{ms.name}} &nbsp;
+                            <small>
+                                <a href='javascript:;' ng-click="messages.$remove(ms)">Remove</a>
+                            </small>
+                        </strong>
+                        <br> {{ms.text}}
+                        <br> {{ms.time}}
+                    </p>
+                </div>
+                <input type="text" ng-model="newMessage">
+                <button type="button" ng-click="addMessage()">Add Message</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
