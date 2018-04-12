@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="script/angular.min.js"></script>
+    <script src="script/firebase.js"></script>
+    <script src="script/angularfire.min.js"></script>
+
+    <script type="text/javascript">
+        //https://github.com/firebase/angularfire/blob/master/docs/reference.md
+
+        var config = {
+            apiKey: "AIzaSyDxwxDq9FEgpo5B6WFSkH_bNUpORZEra48",
+            authDomain: "thuyvkblog.firebaseapp.com",
+            databaseURL: "https://thuyvkblog.firebaseio.com",
+            projectId: "thuyvkblog",
+            storageBucket: "thuyvkblog.appspot.com",
+            messagingSenderId: "763203502389"
+        };
+        firebase.initializeApp(config);
+
+        var app = angular.module('app', ['firebase']);
+        app.controller('MyController', function($scope, $firebaseAuth)
+        {
+
+            //CHECK LOGIN STATUS
+            $firebaseAuth().$onAuthStateChanged(function (firebaseUser) {
+                $scope.fullname = firebaseUser.displayName;
+                $scope.email = firebaseUser.email;
+            });
+
+            //GOOGLE LOGIN
+            $scope.LoginGoogle = function(){
+                    //alid values for the string version of the argument are "facebook", "github", "google", and "twitter"
+                    $firebaseAuth().$signInWithPopup("google").then(function(result) {
+                        $scope.fullname = result.user.displayName;
+                        $scope.email = result.user.email;
+                    }).catch(function(error) {
+                      console.error("Authentication failed:", error);
+                    });
+                };
+
+        });
+
+
+    </script>
+</head>
+<body ng-app="app">
+    <div ng-controller="MyController">
+        <h1>Sample Login</h1>
+        <p>
+            <input type="button" value="Login Google" ng-click="LoginGoogle()" />
+        </p>
+        <p>
+            Hello: {{fullname}}, {{email}}
+        </p>
+    </div>
+
+</body>
+
+</html>
